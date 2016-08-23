@@ -62,8 +62,11 @@ d3.csv("duracion_matrimonio.csv", type, function(error, data) {
 
   g.append("g")
       .attr("class", "axis axis--y")
+      .text("Prueba")
       .call(d3.axisLeft(y).ticks(10, "%"));
-
+      
+      
+  
   var legend = serie.append("g")
       .attr("class", "legend")
       .attr("transform", function(d) { var d = d[d.length - 1]; return "translate(" + (x(d.data.Anno) + x.bandwidth()) + "," + ((y(d[0]) + y(d[1])) / 2) + ")"; });
